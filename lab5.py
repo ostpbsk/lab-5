@@ -1,4 +1,4 @@
-"""Module error"""
+"""Modules are absent"""
 
 
 class TimeConverter:
@@ -19,15 +19,12 @@ class TimeConverter:
     def time_to_seconds(self):
         """
         Turns time in format hh:mm:ss into seconds
-        :return:
         """
         return self.hours * 3600 + self.minutes * 60 + self.seconds
 
     def seconds_to_time(self, total_seconds):
         """
         Turns seconds into a time, formatted as hh:mm:ss
-        :param total_seconds:
-        :return:
         """
         self.hours, remainder = divmod(total_seconds, 3600)
         self.minutes, self.seconds = divmod(remainder, 60)
@@ -39,8 +36,6 @@ class TimeConverter:
         """
         Gives an output, which differs with different inputs.
         Accepts either numbers or time in format hh:mm:ss
-        :param time_format:
-        :return:
         """
         if time_format == 'hh:mm:ss':
             print(str(self))
